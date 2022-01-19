@@ -37,10 +37,10 @@ const canMakeWordCloud = (newsPaper, wordCloud) => {
     return true;
 };
 
-console.log('TESTING')
-console.log('Must be FALSE =>', canMakeWordCloud(['my', 'city', 'rules', 'car', 'boat'], ['my', 'city', 'drools'])) // false
-console.log('Must be FALSE =>', canMakeWordCloud(['my', 'city', 'rules'], ['my', 'city', 'my', 'rules'])) // false
-console.log('Must be TRUE =>', canMakeWordCloud(['my', 'city', 'rules', 'my', 'team', 'wins', 'my'], ['my', 'rules', 'my', 'city'])) // true
-console.log('Must be FALSE =>', canMakeWordCloud(['my', 'rules', 'my', 'team', 'wins', 'my'], ['my', 'rules', 'my', 'city'])) // false
-console.log('Must be FALSE =>', canMakeWordCloud([], ['my', 'city', 'drools'])) // false
-console.log('Must be TRUE =>', canMakeWordCloud(['my', 'city', 'drools'], [])) // true
+console.log('TESTING');
+console.log('Must be FALSE =>', canMakeWordCloud(['my', 'city', 'rules', 'car', 'boat'], ['my', 'city', 'drools'])); // false
+console.log('Must be FALSE =>', canMakeWordCloud(['my', 'city', 'rules'], ['my', 'city', 'my', 'rules'])); // false
+console.log('Must be TRUE =>', canMakeWordCloud(['my', 'city', 'rules', 'my', 'team', 'wins', 'my'], ['my', 'rules', 'my', 'city'])); // true
+console.log('Must be FALSE =>', canMakeWordCloud(['my', 'rules', 'my', 'team', 'wins', 'my'], ['my', 'rules', 'my', 'city'])); // false
+console.log('Must be FALSE =>', canMakeWordCloud([], ['my', 'city', 'drools'])); // false
+console.log('Must be TRUE =>', canMakeWordCloud(['my', 'city', 'drools'], [])); // true
