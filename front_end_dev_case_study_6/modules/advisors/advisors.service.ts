@@ -68,7 +68,7 @@ export class AdvisorsService {
         // });
         //
         // if (!response.ok) {
-        //     throw new Error(`Failed to fetch advisors: ${response.status}`);
+        //     throw new Error(`Failed to fetch advisor's availability: ${response.status}`);
         // }
         //
         // const advisorAvailability = (await response.json()) as AdvisorAvailabilityResponse[];
