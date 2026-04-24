@@ -47,7 +47,7 @@ export function useAdvisorsAvailability(initialAdvisors: AdvisorResponseType[]) 
         void refreshAvailability();
 
         // 30_000 = 30 seconds
-        const intervalId = window.setInterval(refreshAvailability, 2_000);
+        const intervalId = window.setInterval(refreshAvailability, 30_000);
 
         return () => {
             isCancelled = true;
