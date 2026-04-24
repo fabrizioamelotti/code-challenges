@@ -1,6 +1,6 @@
 import { Metadata } from "next";
-import TailwindAdvisorsList from "@/components/tailwind/advisors-list";
 import { AdvisorsService } from "@/modules/advisors/advisors.service";
+import TailwindAdvisorsContainer from "@/components/advisors/tailwind-advisors-container";
 
 export const metadata: Metadata = {
     title: 'List with Tailwind CSS',
@@ -10,5 +10,5 @@ export const metadata: Metadata = {
 export default async function Page() {
     const advisors = await AdvisorsService.findAdvisors();
 
-    return <TailwindAdvisorsList advisors={advisors} />;
+    return <TailwindAdvisorsContainer advisors={advisors} />;
 }

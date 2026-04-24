@@ -1,5 +1,5 @@
 import {AdvisorsService} from "@/modules/advisors/advisors.service";
-import AdvisorsList from "@/components/list/advisors-list";
+import ListAdvisorsContainer from "@/components/advisors/list-advisors-container";
 import {Metadata} from "next";
 
 export const metadata: Metadata = {
@@ -10,5 +10,5 @@ export const metadata: Metadata = {
 export default async function Page() {
     const advisors = await AdvisorsService.findAdvisors();
 
-    return <AdvisorsList advisors={advisors}/>;
+    return <ListAdvisorsContainer advisors={advisors} />;
 }

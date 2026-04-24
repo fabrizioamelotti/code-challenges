@@ -1,6 +1,6 @@
 import { Metadata } from "next";
 import { AdvisorsService } from "@/modules/advisors/advisors.service";
-import MuiAdvisorsList from "@/components/mui/advisors-list";
+import MuiAdvisorsContainer from "@/components/advisors/mui-advisors-container";
 
 export const metadata: Metadata = {
     title: 'List with MUI CSS',
@@ -10,5 +10,5 @@ export const metadata: Metadata = {
 export default async function Page() {
     const advisors = await AdvisorsService.findAdvisors();
 
-    return <MuiAdvisorsList advisors={advisors} />;
+    return <MuiAdvisorsContainer advisors={advisors} />;
 }
