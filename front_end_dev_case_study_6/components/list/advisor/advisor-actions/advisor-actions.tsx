@@ -1,14 +1,14 @@
 'use client'
 
 import Image from "next/image";
-import {AdvisorsType} from "@/modules/advisors/advisors.type";
+import {AdvisorResponseType} from "../../../../modules/advisors/advisors.type";
 import styles from "@/components/list/advisor/advisor-actions/advisor-actions.module.css";
 import {dictionary} from "@/components/dictionary/dictionary";
 import callIcon from "@/components/icons/call.svg";
 import chatIcon from "@/components/icons/chat.svg";
 
 type AdvisorActionsProps = {
-    advisor: AdvisorsType;
+    advisor: AdvisorResponseType;
 };
 
 export default function AdvisorActions({advisor}: AdvisorActionsProps) {

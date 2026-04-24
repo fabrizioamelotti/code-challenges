@@ -4,10 +4,10 @@ import Image from "next/image";
 import { dictionary } from "@/components/dictionary/dictionary";
 import callIcon from "@/components/icons/call.svg";
 import chatIcon from "@/components/icons/chat.svg";
-import { AdvisorsType } from "@/modules/advisors/advisors.type";
+import { AdvisorResponseType } from "../../modules/advisors/advisors.type";
 
 type AdvisorActionsProps = {
-    advisor: AdvisorsType;
+    advisor: AdvisorResponseType;
 };
 
 const availableButtonClass =

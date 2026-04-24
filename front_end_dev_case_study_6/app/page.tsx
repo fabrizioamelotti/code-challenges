@@ -18,13 +18,19 @@ export default function Page() {
                         className="rounded-full bg-teal-500 px-6 py-3 font-medium text-white transition hover:bg-teal-600"
                         href={"/list"}
                     >
-                        Open list with Custom CSS
+                        Custom CSS
                     </Link>
                     <Link
                         className="rounded-full bg-teal-500 px-6 py-3 font-medium text-white transition hover:bg-teal-600"
                         href={"/tailwind"}
                     >
-                        Open list with Tailwind CSS
+                        Tailwind
+                    </Link>
+                    <Link
+                        className="rounded-full bg-teal-500 px-6 py-3 font-medium text-white transition hover:bg-teal-600"
+                        href={"/mui"}
+                    >
+                        MUI
                     </Link>
                 </div>
             </section>

@@ -1,7 +1,23 @@
-import {AdvisorsType} from "@/modules/advisors/advisors.type";
+import {AdvisorAvailabilityResponse, AdvisorResponseType} from "./advisors.type";
 
 export class AdvisorsService {
-    public static async findAdvisors(): Promise<AdvisorsType[]> {
+    public static async findAdvisors(): Promise<AdvisorResponseType[]> {
+        // ENDPOINT DOESN'T WORK --> So I WILL MOCK THE RESPONSE
+        //
+        // [GET] https://demo2255213.mockable.io/listings
+        // const response = await fetch("https://demo2255213.mockable.io/listings", {
+        //     method: "GET",
+        //     cache: "no-store",
+        // });
+        //
+        // if (!response.ok) {
+        //     throw new Error(`Failed to fetch advisors: ${response.status}`);
+        // }
+        //
+        // const advisors = (await response.json()) as AdvisorResponseType[];
+        //
+        // return advisors;
+
         return [
             {
                 id: "111",
@@ -41,4 +57,32 @@ export class AdvisorsService {
             },
         ]
     };
+
+    public static async checkAdvisorAvailabilityById(advisorId: string): Promise<AdvisorAvailabilityResponse> {
+        // ENDPOINT DOESN'T WORK --> So I WILL MOCK THE RESPONSE
+        //
+        // [GET] https://demo2255213.mockable.io/advisor-availability?advisorId=100
+        // const response = await fetch(`https://demo2255213.mockable.io/advisor-availability?advisorId=${advisorId}`, {
+        //     method: "GET",
+        //     cache: "no-store",
+        // });
+        //
+        // if (!response.ok) {
+        //     throw new Error(`Failed to fetch advisors: ${response.status}`);
+        // }
+        //
+        // const advisorAvailability = (await response.json()) as AdvisorAvailabilityResponse[];
+        //
+        // return advisorAvailability;
+
+        return {
+            id: advisorId,
+            callAvailability: this.getRandomBoolean(),
+            chatAvailability: this.getRandomBoolean(),
+        }
+    }
+
+    private static getRandomBoolean() {
+        return Math.random() < 0.5;
+    }
 }

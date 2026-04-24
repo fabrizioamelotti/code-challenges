@@ -1,8 +1,8 @@
 import AdvisorCard from "@/components/tailwind/advisor-card";
-import { AdvisorsType } from "@/modules/advisors/advisors.type";
+import { AdvisorResponseType } from "../../modules/advisors/advisors.type";
 
 type AdvisorsListProps = {
-    advisors: AdvisorsType[];
+    advisors: AdvisorResponseType[];
 };
 
 export default function TailwindAdvisorsList({ advisors }: AdvisorsListProps) {

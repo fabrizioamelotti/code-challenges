@@ -1,10 +1,10 @@
 import Image from "next/image";
-import {AdvisorsType} from "@/modules/advisors/advisors.type";
+import {AdvisorResponseType} from "../../../modules/advisors/advisors.type";
 import styles from "@/components/list/advisor/advisor.module.css";
 import AdvisorActions from "@/components/list/advisor/advisor-actions/advisor-actions";
 
 type AdvisorProps = {
-    advisor: AdvisorsType;
+    advisor: AdvisorResponseType;
 };
 
 export default function Advisor({advisor}: AdvisorProps) {

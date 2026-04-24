@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import {ReactNode} from "react";
+import { ReactNode } from "react";
 
 export const metadata: Metadata = {
   title: "Front-end dev case study 6",
@@ -14,7 +14,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang={"en"}>
-      <body className={"min-h-full flex flex-col"}>{children}</body>
+      <body className={"min-h-full flex flex-col"}>
+        {children}
+      </body>
     </html>
   );
 }

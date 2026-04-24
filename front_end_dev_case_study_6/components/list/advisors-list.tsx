@@ -1,9 +1,9 @@
 import Advisor from "@/components/list/advisor/advisor";
-import {AdvisorsType} from "@/modules/advisors/advisors.type";
+import {AdvisorResponseType} from "../../modules/advisors/advisors.type";
 import styles from "@/components/list/advisors-list.module.css";
 
 type AdvisorsListProps = {
-    advisors: AdvisorsType[];
+    advisors: AdvisorResponseType[];
 };
 
 export default function AdvisorsList({advisors}: AdvisorsListProps) {
