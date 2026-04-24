@@ -1,7 +1,7 @@
 'use client';
 
-import AdvisorsContainer from "@/components/advisors/advisors-container";
 import MuiAdvisorsList from "@/components/mui/advisors-list";
+import { useAdvisorsAvailability } from "@/components/advisors/use-advisors-availability";
 import { AdvisorResponseType } from "@/modules/advisors/advisors.type";
 
 type MuiAdvisorsContainerProps = {
@@ -11,9 +11,7 @@ type MuiAdvisorsContainerProps = {
 export default function MuiAdvisorsContainer({
     advisors,
 }: MuiAdvisorsContainerProps) {
-    return (
-        <AdvisorsContainer advisors={advisors}>
-            {(updatedAdvisors) => <MuiAdvisorsList advisors={updatedAdvisors} />}
-        </AdvisorsContainer>
-    );
+    const updatedAdvisors = useAdvisorsAvailability(advisors);
+
+    return <MuiAdvisorsList advisors={updatedAdvisors} />;
 }

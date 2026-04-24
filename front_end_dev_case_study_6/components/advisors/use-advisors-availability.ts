@@ -1,18 +1,10 @@
 'use client';
 
-import { ReactNode, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { AdvisorsService } from "@/modules/advisors/advisors.service";
 import { AdvisorResponseType } from "@/modules/advisors/advisors.type";
 
-type AdvisorsContainerProps = {
-    advisors: AdvisorResponseType[];
-    children: (advisors: AdvisorResponseType[]) => ReactNode;
-};
-
-export default function AdvisorsContainer({
-    advisors: initialAdvisors,
-    children,
-}: AdvisorsContainerProps) {
+export function useAdvisorsAvailability(initialAdvisors: AdvisorResponseType[]) {
     const [advisors, setAdvisors] = useState(initialAdvisors);
 
     useEffect(() => {
@@ -55,7 +47,7 @@ export default function AdvisorsContainer({
         void refreshAvailability();
 
         // 30_000 = 30 seconds
-        const intervalId = window.setInterval(refreshAvailability, 30_000);
+        const intervalId = window.setInterval(refreshAvailability, 2_000);
 
         return () => {
             isCancelled = true;
@@ -63,5 +55,5 @@ export default function AdvisorsContainer({
         };
     }, [initialAdvisors]);
 
-    return <>{children(advisors)}</>;
+    return advisors;
 }

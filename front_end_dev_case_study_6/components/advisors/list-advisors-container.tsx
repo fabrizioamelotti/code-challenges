@@ -1,7 +1,7 @@
 'use client';
 
-import AdvisorsContainer from "@/components/advisors/advisors-container";
 import AdvisorsList from "@/components/list/advisors-list";
+import { useAdvisorsAvailability } from "@/components/advisors/use-advisors-availability";
 import { AdvisorResponseType } from "@/modules/advisors/advisors.type";
 
 type ListAdvisorsContainerProps = {
@@ -11,9 +11,7 @@ type ListAdvisorsContainerProps = {
 export default function ListAdvisorsContainer({
     advisors,
 }: ListAdvisorsContainerProps) {
-    return (
-        <AdvisorsContainer advisors={advisors}>
-            {(updatedAdvisors) => <AdvisorsList advisors={updatedAdvisors} />}
-        </AdvisorsContainer>
-    );
+    const updatedAdvisors = useAdvisorsAvailability(advisors);
+
+    return <AdvisorsList advisors={updatedAdvisors} />;
 }
