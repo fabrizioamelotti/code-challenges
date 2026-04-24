@@ -24,8 +24,7 @@ Executed the command below to create a Next.js project.
 npx create-next-app@latest front_end_dev_case_study_6 --yes 
 ```
 
-### 2. Created three pages
+### 2. Created two pages
 - List | Custom CSS
-- MUI | Built with Material-UI
 - Tailwind | Built with Tailwind CSS
 
