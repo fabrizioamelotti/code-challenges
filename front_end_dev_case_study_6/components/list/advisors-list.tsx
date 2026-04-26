@@ -1,5 +1,5 @@
 import Advisor from "@/components/list/advisor/advisor";
-import { AdvisorResponseType } from "../../modules/advisors/advisors.type";
+import { AdvisorResponseType } from "@/modules/advisors/advisors.type";
 import styles from "@/components/list/advisors-list.module.css";
 
 type AdvisorsListProps = {

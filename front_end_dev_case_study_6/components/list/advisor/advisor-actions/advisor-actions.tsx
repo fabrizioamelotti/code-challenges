@@ -1,7 +1,7 @@
 'use client'
 
 import Image from "next/image";
-import {AdvisorResponseType} from "../../../../modules/advisors/advisors.type";
+import {AdvisorResponseType} from "@/modules/advisors/advisors.type";
 import styles from "@/components/list/advisor/advisor-actions/advisor-actions.module.css";
 import {dictionary} from "@/components/dictionary/dictionary";
 import callIcon from "@/components/icons/call.svg";

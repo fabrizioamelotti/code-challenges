@@ -1,5 +1,5 @@
 import Image from "next/image";
-import {AdvisorResponseType} from "../../../modules/advisors/advisors.type";
+import {AdvisorResponseType} from "@/modules/advisors/advisors.type";
 import styles from "@/components/list/advisor/advisor.module.css";
 import AdvisorActions from "@/components/list/advisor/advisor-actions/advisor-actions";
 
@@ -23,7 +23,7 @@ export default function Advisor({advisor}: AdvisorProps) {
                 <h2 className={styles.name}>{fullName}</h2>
             </div>
 
-            <AdvisorActions advisor={advisor} />
+            <AdvisorActions advisor={advisor}/>
         </article>
     );
 }

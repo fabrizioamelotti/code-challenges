@@ -1,6 +1,6 @@
 import Image from "next/image";
 import TailwindAdvisorActions from "@/components/tailwind/advisor-actions";
-import { AdvisorResponseType } from "../../modules/advisors/advisors.type";
+import { AdvisorResponseType } from "@/modules/advisors/advisors.type";
 
 type AdvisorCardProps = {
     advisor: AdvisorResponseType;

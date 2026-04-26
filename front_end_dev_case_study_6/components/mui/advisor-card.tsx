@@ -1,4 +1,4 @@
-import { AdvisorResponseType } from "../../modules/advisors/advisors.type";
+import { AdvisorResponseType } from "@/modules/advisors/advisors.type";
 import MuiAdvisorActions from "@/components/mui/advisor-actions";
 import { Avatar, Box, Stack, Typography } from "@mui/material";
 

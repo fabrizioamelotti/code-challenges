@@ -1,7 +1,7 @@
 'use client';
 
 import { dictionary } from "@/components/dictionary/dictionary";
-import { AdvisorResponseType } from "../../modules/advisors/advisors.type";
+import { AdvisorResponseType } from "@/modules/advisors/advisors.type";
 import ChatBubbleOutlineRoundedIcon from "@mui/icons-material/ChatBubbleOutlineRounded";
 import LocalPhoneOutlinedIcon from "@mui/icons-material/LocalPhoneOutlined";
 import { Button, Stack, Typography } from "@mui/material";

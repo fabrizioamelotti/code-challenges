@@ -1,5 +1,5 @@
 import AdvisorCard from "@/components/mui/advisor-card";
-import { AdvisorResponseType } from "../../modules/advisors/advisors.type";
+import { AdvisorResponseType } from "@/modules/advisors/advisors.type";
 import { Box, Paper } from "@mui/material";
 
 type AdvisorsListProps = {

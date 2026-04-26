@@ -82,7 +82,12 @@ export class AdvisorsService {
         }
     }
 
-    private static getRandomBoolean() {
+    /**
+     * Returns a random boolean value to simulate the availability of an advisor.
+     * @returns {boolean} - A random boolean value.
+     * @private
+     */
+    private static getRandomBoolean(): boolean {
         return Math.random() < 0.5;
     }
 }
